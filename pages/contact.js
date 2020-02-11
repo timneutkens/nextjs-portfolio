@@ -5,20 +5,22 @@ function Contact() {
 
   return (
     <Layout>
+
       <h1>
         <Trail str="Let's get in contact!" />
       </h1>
-      <form action="/contact" method="POST">
-        <label>Name:</label>
+
+      <form action="/api/email" method="POST">
+        <label htmlFor="name">Name:</label>
         <input type="text" id="name" required/>
 
-        <label>Email:</label>
+        <label htmlFor="email">Email:</label>
         <input type="email" id="email" required/>
 
-        <label>Subject:</label>
+        <label htmlFor="subject">Subject:</label>
         <input type="text" id="subject" />
 
-        <label>Text:</label>
+        <label htmlFor="text">Text:</label>
         <textarea id="text" required/>
 
         <button type="submit" className="work-btn">

@@ -20,7 +20,7 @@ export default function Layout(props) {
 
       body{
         margin: 0;
-        font-size: 20px;
+        font-size: 1.2em;
         line-height: 1.7;
         font-weight: 400;
         background: #fff;
@@ -39,19 +39,19 @@ export default function Layout(props) {
       }
 
       h1, h2, h3{
-        margin: 40px 0 30px;
+        margin: 2.3em 0 2.7em;
       }
 
       h1{
-        font-size: 42px;
+        font-size: 3em;
       }
 
       h2{
-        font-size;
+        font-size: 2em;
       }
 
       p{
-        margin 0 0 10px;
+        margin 0 0 1em;
       }
 
       img{
