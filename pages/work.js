@@ -4,11 +4,11 @@ import Link from "next/link";
 import Trail from "../components/animations/TrailAnimation";
 
 function Work() {
-  const PostLink = props => (
+  const PostLink = ({ title, slug }) => (
     <ul>
       <li>
-        <Link href="/p/[id]" as={`/p/${props.id}`}>
-          <a>{props.id}</a>
+        <Link href="/p/[id]" as={`/p/${slug}`}>
+          <a>{title}</a>
         </Link>
       </li>
       <style jsx>
@@ -41,23 +41,19 @@ function Work() {
       <div className="projects">
         <div className="project-list">
           <Project>
-            {/* <h2>Flight App</h2> */}
-            <PostLink id="Flight App" />
+            <PostLink title="Flight App" slug="flight-app" />
           </Project>
 
           <Project>
-            {/* <h2>Bible App</h2> */}
-            <PostLink id="Bible App" />
+            <PostLink title="Bible App" slug="bible-app" />
           </Project>
 
           <Project>
-            {/* <h2>Chat App</h2> */}
-            <PostLink id="Chat App" />
+            <PostLink title="Chat App" slug="chat-app" />
           </Project>
 
           <Project>
-            {/* <h2>Weather App</h2> */}
-            <PostLink id="Weather App" />
+            <PostLink title="Weather App" slug="weather-app" />
           </Project>
         </div>
       </div>

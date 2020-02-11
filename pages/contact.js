@@ -2,23 +2,24 @@ import Layout from "../components/Layout";
 import Trail from "../components/animations/TrailAnimation";
 
 function Contact() {
+
   return (
     <Layout>
       <h1>
         <Trail str="Let's get in contact!" />
       </h1>
-      <form action="/">
+      <form action="/contact" method="POST">
         <label>Name:</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" required/>
 
         <label>Email:</label>
-        <input type="email" id="email" />
+        <input type="email" id="email" required/>
 
         <label>Subject:</label>
         <input type="text" id="subject" />
 
         <label>Text:</label>
-        <textarea id="text" />
+        <textarea id="text" required/>
 
         <button type="submit" className="work-btn">
           Send
