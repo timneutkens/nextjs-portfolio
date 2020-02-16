@@ -35,7 +35,6 @@ export default function Project({ name }) {
       <h1>
         <Trail str={name} />
       </h1>
-      <img src={`../static/${name}.png`} />
       {Object.entries(content).map(key => {
         if (key[0] === name) {
           return <p key={key[0]}>{key[1]}</p>;
@@ -51,10 +50,6 @@ export default function Project({ name }) {
           max-width: 800px;
           margin: 0 auto 100px;
           padding: 20px;
-        }
-
-        img {
-          width: 30%;
         }
 
         a {
