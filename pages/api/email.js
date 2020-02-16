@@ -1,20 +1,22 @@
+import nodemailer from "nodemailer";
 
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '1mb',
-    },
-  },
-}
+const emailPass = 'Brianbaw1!';
 
-export default (req, res) => {  
+const transporter = nodemailer.createTransport({
+  host: "smtp.ionos.de",
+  port: 25,
+  auth: {
+    user: 'brianbawuah96@gmail.com',
+    pass: emailPass
+  }
+})
+
+export default async (req, res) => {
+  const {senderMail, name, content, recipientMail} = req.body;
 
   console.log(req.body);
-    res.json({ success: req.body});
-  }
-
-
+}
 
 
 

@@ -1,29 +1,33 @@
-import Layout from "../components/Layout";
-import Trail from "../components/animations/TrailAnimation";
+import { useForm } from "react-hook-form";
 
-function Contact() {
+export default function ContactForm() {
+  const {register, handleSubmit, reset} = useForm();
+
+  const onSubmit = (data) => {
+    
+    
+    
+    console.log(data)
+  
+  }
+
 
   return (
-    <Layout>
-
-      <h1>
-        <Trail str="Let's get in contact!" />
-      </h1>
-
-      <form action="/api/email" method="POST">
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" required/>
+    <div>
+      <form action="/api/email" onSubmit={handleSubmit(onSubmit)}>
+        <label >Name:</label>
+        <input name="name" ref={register} type="text" id="name" required/>
 
         <label htmlFor="email">Email:</label>
-        <input type="email" id="email" required/>
+        <input name="email" ref={register} type="email" id="email" required />
 
         <label htmlFor="subject">Subject:</label>
-        <input type="text" id="subject" />
+        <input name="subject" ref={register} type="text" id="subject" />
 
         <label htmlFor="text">Text:</label>
-        <textarea id="text" required/>
+        <textarea name="text" ref={register} id="text" required name="text" />
 
-        <button type="submit" className="work-btn">
+        <button type="submit" className="work-btn" onClick={reset}>
           Send
         </button>
       </form>
@@ -55,7 +59,7 @@ function Contact() {
             font-weight: bolder;
             height: 2em;
             padding: 0.5em;
-            transition: 0.3s cubic-bezier(.66,.21,.27,.73);
+            transition: 0.3s cubic-bezier(0.66, 0.21, 0.27, 0.73);
           }
 
           button {
@@ -75,22 +79,20 @@ function Contact() {
             background: #e2e8f0;
             height: 5em;
             font-size: 1em;
-            transition: 0.3s cubic-bezier(.66,.21,.27,.73);
-            
+            transition: 0.3s cubic-bezier(0.66, 0.21, 0.27, 0.73);
           }
 
-          textarea:focus{
+          textarea:focus {
             height: 8em;
           }
 
-          input:focus, textarea:focus {
-            background: #CBD5E0;
+          input:focus,
+          textarea:focus {
+            background: #cbd5e0;
             outline: none;
           }
         `}
       </style>
-    </Layout>
+    </div>
   );
 }
-
-export default Contact;

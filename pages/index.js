@@ -31,7 +31,7 @@ function HomePage() {
           }
           .about-text {
             color: #777;
-            text-align: left;
+            text-align: center;
             max-width: 800px;
             margin: 0 auto 100px;
             padding: 20px;
@@ -52,6 +52,7 @@ function HomePage() {
             font-size: 1.2em;
             overflow: hidden;
           }
+          
         `}
       </style>
     </Layout>

@@ -16,7 +16,7 @@ export default function Header() {
             align-items: center;
           } 
 
-          @media(max-width: 600px){
+          @media(max-width: 735px){
             header {
               display: block;
               text-align: center;

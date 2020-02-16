@@ -19,11 +19,6 @@ export default function Menu() {
         </Link>
       </li>
 
-      <li>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
-      </li>
       <style jsx>{`
         ul {
           margin: 5px 0 0;
@@ -44,7 +39,7 @@ export default function Menu() {
           padding-bottom: 3px;
           border-bottom: 2px solid #2D3748;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 735px) {
           ul {
             display: block;
             margin-top: 20px;
