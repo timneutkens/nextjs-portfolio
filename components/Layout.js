@@ -14,7 +14,7 @@ export default function Layout(props) {
       }
 
       .content-wrapper{
-        height: 100vh;
+        height: 100%;
         text-align: center;
       }
 
@@ -28,6 +28,7 @@ export default function Layout(props) {
         font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe Ui', 'Fira Sans', Avenir, 'Helvetica Neue', 'Lucida Grande', 'sans-serig;
         text-rendering: optimizeLegibility;
       }
+      
 
       a{
         color: #1b789e;

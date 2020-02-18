@@ -46,7 +46,7 @@ export default function Project({ name }) {
       <style jsx>{`
         p {
           color: #777;
-          text-align: left;
+          text-align: center;
           max-width: 800px;
           margin: 0 auto 100px;
           padding: 20px;

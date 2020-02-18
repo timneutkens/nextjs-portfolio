@@ -5,20 +5,18 @@ import Trail from "../components/animations/TrailAnimation";
 
 function Work() {
   const PostLink = ({ title, slug }) => (
-    <ul>
+    
       <li>
         <Link href="/p/[id]" as={`/p/${slug}`}>
           <a>{title}</a>
         </Link>
-      </li>
+  
       <style jsx>
         {`
-          ul {
-            list-style-type: none;
-          }
+          
           a {
             text-decoration: none;
-            width: max-content;
+            width: 100%;
             justify-self: center;
             background: #777;
             padding: 1vmax 2vmax;
@@ -28,9 +26,26 @@ function Work() {
             border: none;
             cursor: pointer;
           }
+
+          li:first-of-type, li:nth-of-type(2){
+
+            margin-right: 1em;
+          }
+  
+          li:nth-of-type(3), li:last-of-type{
+            margin-left: 1em;
+          }
+
+          @media only screen and (max-width: 890px){
+            li:first-of-type, li:nth-of-type(2),  
+             li:nth-of-type(3), li:last-of-type{
+               margin: 1em 0;
+             }
+
+          }
         `}
       </style>
-    </ul>
+  </li>
   );
 
   return (
@@ -40,6 +55,8 @@ function Work() {
       </h1>
       <div className="projects">
         <div className="project-list">
+          <ul>
+
           <Project>
             <PostLink title="Flight App" slug="flight-app" />
           </Project>
@@ -55,6 +72,7 @@ function Work() {
           <Project>
             <PostLink title="Weather App" slug="weather-app" />
           </Project>
+          </ul>
         </div>
       </div>
       <style jsx>{`
@@ -63,11 +81,26 @@ function Work() {
           margin: 0 auto;
         }
 
+     
+
+        ul {
+          list-style-type: none;
+          display:flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding-inline-start: 0px;
+        }
+
+        @media only screen and (max-width: 890px){
+          ul{
+            flex-direction: column;
+          }
+        }
         .project-list {
           padding: 0 30px;
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          justify-content: center;
         }
       `}</style>
     </Layout>
