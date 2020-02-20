@@ -4,6 +4,7 @@ import {content} from '../../content'
 
 export async function unstable_getStaticPaths() {
   return {
+    fallback: false,
     paths: Object.keys(content).map(slug => {
       return {
         params: {
@@ -23,7 +24,6 @@ export async function unstable_getStaticProps({params}) {
 }
  
 export default function Project({ project }) {
-  console.log(project)
   return (
     <Layout>
       <h1>
