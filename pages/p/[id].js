@@ -1,10 +1,10 @@
 import Layout from "../../components/Layout";
 import Trail from "../../components/animations/TrailAnimation";
 import {content} from '../../content'
+import Error from 'next/error'
 
 export async function unstable_getStaticPaths() {
   return {
-    fallback: false,
     paths: Object.keys(content).map(slug => {
       return {
         params: {
@@ -24,6 +24,10 @@ export async function unstable_getStaticProps({params}) {
 }
  
 export default function Project({ project }) {
+  if(!project) {
+    return <Error statusCode={404} />
+  }
+
   return (
     <Layout>
       <h1>
