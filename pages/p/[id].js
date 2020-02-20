@@ -6,7 +6,9 @@ export async function unstable_getStaticPaths() {
   return {
     paths: Object.keys(content).map(slug => {
       return {
-        id: slug
+        params: {
+          id: slug
+        }
       }
     })
   }
